@@ -13,7 +13,7 @@ section .text
 		jmp while_cond
 
 	while_cond:
-		cmp BYTE[rdi + rax], 0
+		cmp BYTE [rdi + rax], 0
 		jne while_body
 		ret
 

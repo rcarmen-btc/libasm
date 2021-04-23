@@ -11,4 +11,5 @@ section .text
 	_ft_write:
 		mov rax, 0x02000001
 		syscall
+		mov rax, rdx
 		ret

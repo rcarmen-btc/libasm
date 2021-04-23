@@ -4,7 +4,6 @@
 ; 4th arg -> R10
 ; 5th arg -> R8
 
-
 global _ft_strcpy
 
 section .text
@@ -13,8 +12,10 @@ section .text
 		jmp while_cond
 
 	while_cond:
-		cmp BYTE[rsi], 0
+		cmp BYTE [rsi], 0
 		jne while_body
+		inc rsi
+		mov rsi, 0
 		ret
 	
 	while_body:
