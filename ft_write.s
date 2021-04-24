@@ -4,12 +4,17 @@
 ; 4th arg -> R10
 ; 5th arg -> R8
 
-global _ft_write
+global ft_write
 
 section .text
 
-	_ft_write:
-		mov rax, 0x02000001
+	ft_write:
+		mov rax, 1
 		syscall
-		mov rax, rdx
+		cmp rax, rdx
+		jne error
+		ret
+	
+	error:
+		mov rax, -1
 		ret

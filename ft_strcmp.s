@@ -4,11 +4,11 @@
 ; 4th arg -> R10
 ; 5th arg -> R8
 
-global _ft_strcmp
+global ft_strcmp
 
 section .text
 
-	_ft_strcmp:
+	ft_strcmp:
 		jmp while_cond
 
 	while_cond:

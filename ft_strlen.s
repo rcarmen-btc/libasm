@@ -4,11 +4,11 @@
 ; 4th arg -> R10
 ; 5th arg -> R8
 
-global _ft_strlen
+global ft_strlen
 
 section .text
 
-	_ft_strlen:
+	ft_strlen:
 		xor rax, rax
 		jmp while_cond
 

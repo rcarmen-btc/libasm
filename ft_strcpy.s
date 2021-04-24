@@ -4,11 +4,11 @@
 ; 4th arg -> R10
 ; 5th arg -> R8
 
-global _ft_strcpy
+global ft_strcpy
 
 section .text
 
-	_ft_strcpy:
+	ft_strcpy:
 		mov rax, rdi
 		jmp while_cond
 
