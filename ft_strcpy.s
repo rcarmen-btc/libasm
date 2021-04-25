@@ -15,8 +15,7 @@ section .text
 	while_cond:
 		cmp BYTE [rsi], 0
 		jne while_body
-		inc rsi
-		mov rsi, 0
+		movsb
 		ret
 	
 	while_body:

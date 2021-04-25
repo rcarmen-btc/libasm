@@ -20,3 +20,4 @@ section .text
 	while_body:
 		inc rax		
 		jmp while_cond
+	

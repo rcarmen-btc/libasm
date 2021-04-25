@@ -4,23 +4,23 @@
 ; 4th arg -> R10
 ; 5th arg -> R8
 
-global ft_write
+global ft_read
 
 extern __errno_location
 
 section .text
 
-	ft_write:
-		mov rax, 1
+	ft_read:
+		mov rax, 0
 		syscall
 		cmp rax, 0
-		jl err
+		jl error
 		ret
 
-	err:
+	error:
 		neg		rax
 		mov		rdi, rax
 		call	__errno_location  wrt ..plt
 		mov		[rax], rdi
 		mov		rax, -1
-		ret		
+		ret

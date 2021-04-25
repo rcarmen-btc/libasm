@@ -9,13 +9,24 @@ global ft_strcmp
 section .text
 
 	ft_strcmp:
-		jmp while_cond
+		xor 	rax, rax
+		jmp		loop
 
-	while_cond:
-		mov cl, BYTE [rdi]
-		mov dl, BYTE [rsi]
-		cmp cl, dl
-		je
-		sub cl dl
-	
+	loop:
+		mov		al, BYTE [rdi]
+		mov		bl, BYTE [rsi]
+		cmp		al, 0
+		je		exit
+		cmp		bl, 0
+		je		exit
+		cmp 	al, bl
+		jne 	exit
+		inc 	rdi
+		inc 	rsi
+		jmp 	loop
 
+	exit:
+		movzx	rax, al
+		movzx	rbx, bl
+		sub		rax, rbx
+		ret		
