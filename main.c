@@ -53,6 +53,19 @@ void	check_ft_strlen()
 
 
 		printf("========(FT_)WRITE========\n");		
+		printf("INVALID FD\n");
+		errno = 0;
+		printf("write:\n   streerror - %s\n   errno - %d\n   fd - %zd\n", strerror(errno), errno, write(5, "test\n", 6));
+		errno = 0;
+		printf("ft_write:\n   streerror - %s\n   errno - %d\n   ft - %zd\n", strerror(errno), errno, ft_write(5, "test\n", 6));
+		printf("\n");
+		printf("INVALID STR\n");
+		errno = 0;
+		printf("write:\n   streerror - %s\n   errno - %d\n   fd - %zd\n", strerror(errno), errno, write(1, NULL, 6));
+		errno = 0;
+		printf("ft_write:\n   streerror - %s\n   errno - %d\n   ft - %zd\n", strerror(errno), errno, ft_write(1, NULL, 6));
+		printf("\n");
+		printf("WORKING FD\n\n");
 		write(1, "write:         |", 17);
 		len = write(1, s[i], strlen(s[i]));
 		write(1, "|\n", 2);
