@@ -28,7 +28,7 @@ int main()
 	s[4] = "1234567890";
 	s[5] = "			       					";
 	s[6] = "		??@!*^&^*(*&*^()*^**&^$*&^&^)))_+_+__#/+|}{/$#@(&^(&^^* 		";
-	s[7] = "Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.";
+	s[7] = "Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.Pellentesque sollicitudin egestas nunc, in lobortis nibh feugiat eu.";
 	while (i < 8)
 	{
 		printf("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
@@ -44,14 +44,36 @@ int main()
 		printf("strcpy:        |%s|\nft_strcpy:     |%s|\n", strcpy(d[i], s[i]), ft_strcpy(ft_d[i], s[i]));	
 
 
-		printf("===================(FT_)STRCMP===================\n");		
-		printf("strcmp:        %d\nft_strcmp:     %d\n", strcmp(d[i], ft_d[i]), ft_strcmp(d[i], ft_d[i]));
-
-
 		printf("===================(FT_)STRDUP===================\n");		
 		printf("strdup:        |%s|\nft_strdup:     |%s|\n", strdup(s[i]), ft_strdup(s[i]));
+
+
+		printf("===================(FT_)STRCMP===================\n");		
+		printf("strcmp:        %d\nft_strcmp:     %d\n", strcmp(d[i], ft_d[i]), ft_strcmp(d[i], ft_d[i]));
 		i++;
 	}
+	printf(":::::::::::::::::::::::::::::::::::::::::::::::::\n");
+	char *str1 = "";
+	char *str2 = "";
+	printf("str1: |%s|\nstr2: |%s|\n", str1, str2);
+	printf("strcmp:    %d\nft_strcmp: %d\n\n", strcmp(str1, str2), ft_strcmp(str1, str2));
+	str1 = "1234567890";
+	str2 = "";
+	printf("str1: |%s|\nstr2: |%s|\n", str1, str2);
+	printf("strcmp:    %d\nft_strcmp: %d\n\n", strcmp(str1, str2), ft_strcmp(str1, str2));
+	str1 = "";
+	str2 = "1234567890";
+	printf("str1: |%s|\nstr2: |%s|\n", str1, str2);
+	printf("strcmp:    %d\nft_strcmp: %d\n\n", strcmp(str1, str2), ft_strcmp(str1, str2));
+	str1 = "zabcdefghijklmnopqrstuvwyxz";
+	str2 = "987654321";
+	printf("str1: |%s|\nstr2: |%s|\n", str1, str2);
+	printf("strcmp:    %d\nft_strcmp: %d\n\n", strcmp(str1, str2), ft_strcmp(str1, str2));
+	str1 = "987654321";
+	str2 = "zabcdefghijklmnopqrstuvwyxz";
+	printf("str1: |%s|\nstr2: |%s|\n", str1, str2);
+	printf("strcmp:    %d\nft_strcmp: %d\n\n", strcmp(str1, str2), ft_strcmp(str1, str2));
+	printf(":::::::::::::::::::::::::::::::::::::::::::::::::\n");
 	printf("■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■\n");
 
 	printf("===================(FT_)WRITE===================\n");		
